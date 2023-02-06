@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Righteous', sans-serif;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/* Title Screen */
+
+.titleContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 157, 28);
+}
+
+.titleContainer h1{
+  font-size: 4rem;
+  color: #111111;
+}
+
+@keyframes bounce {
+  0%{transform: translate(0px, 0px);}
+  50%{transform: translate(0px, -10px);}
+  100%{transform: translate(0px, 0px);}
+}
+
+.titleContainer button{
+  padding: 1em 2em;
+  background-color: #111111;
+  color: aliceblue;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 2rem;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: 3700ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+
+.title{
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.title h1{
+  padding: 0;
+  margin: 0;
+}
+
+/* Game */
+
+.gameContainer{
+  background-color: rgb(255, 157, 28);
+  height: 100vh;
+}
+
+.gameHeader{
+  display: flex;
+  justify-content: space-between;
+  padding: 0em 2em;
+  align-items: flex-start;
+  font-size: 1rem;
+  height: 12vh;
+}
+
+.gameHeader button{
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: #111111;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.gameDesc{
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.gameLetters{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  min-height: 20vh;
+  padding-top: 0.5em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.letter{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0.1em;
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+.letterWrong{
+  background-color: rgb(186, 51, 51);
+  text-decoration: line-through;
+}
+
+.letterCorrect{
+  background-color: rgb(53, 186, 51);
+}
+
+.wordContainer{
+  padding-top: 0.5em;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.blankContainer{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5em;
+  font-size: 3rem;
+}
+
+.livesContainer{
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 1em;
+}
+
+.lostPageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(255, 157, 28);
+}
+
+.lostTitle{
+  font-size: 4rem;
+}
+
+.lostWord{
+  padding-bottom: 5em;
+}
+
+.lostPageContainer button{
+  padding: 1em 2em;
+  background-color: #111111;
+  color: aliceblue;
+  border: none;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 2rem;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: 3700ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+
+.timerContainer{
+  text-align: center;
+}
+
+.stContainer{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-left: 2em;
+}
+
+@media (max-width: 700px) {
+  .stContainer{
+    flex-direction: column;
+    padding: 0;
+    font-size: 1rem;
+  }
+  .timerContainer{
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .gameHeader{
+    padding: 0;
+  }
+  .gameLetters{
+    width: 80%;
+    grid-template-columns: auto auto auto auto;
+  }
+  .blankContainer{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .livesContainer{
+    padding: 0;
+  }
+  .timerContainer{
+    padding: 0;
+    font-size: 1.5rem;
+  }
+}
+
